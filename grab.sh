@@ -16,3 +16,5 @@ if [ -n "$URL4" ]; then
 url4=$URL4
 ffmpeg -loglevel panic -y -i $url4 -r 1 -vsync 1 -qscale 1 -f image2 -updatefirst 1 /tmp/www/snapshot3.jpg
 fi
+echo "Started all, waiting"
+tail -f /dev/null
