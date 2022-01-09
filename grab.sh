@@ -1,7 +1,8 @@
 #!/bin/bash
 /usr/sbin/lighttpd -D -f /lighttpd.conf &
 if [ -n "$URL1" ]; then
-  ffmpeg -rtsp_transport tcp -i '$URL1' -q:v 4 -r 1 -update 1 /tmp/www/snapshot1.jpg &
+  url1=$URL1
+  ffmpeg -rtsp_transport tcp -i '$url1' -q:v 4 -r 1 -update 1 /tmp/www/snapshot1.jpg &
 fi
 if [ -n "$URL2" ]; then
   ffmpeg -rtsp_transport tcp -i '$URL2' -q:v 4 -r 1 -update 1 /tmp/www/snapshot2.jpg &
