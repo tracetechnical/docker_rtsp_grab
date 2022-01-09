@@ -1,5 +1,5 @@
 ARG ARCH=
-FROM ${ARCH}alpine:3.7
+FROM ${ARCH}alpine:3.15.0
 
 RUN apk add --no-cache lighttpd
 RUN apk add --no-cache curl
