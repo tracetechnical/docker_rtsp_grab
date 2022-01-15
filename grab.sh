@@ -1,7 +1,7 @@
 #!/bin/bash
 /usr/sbin/lighttpd -D -f /lighttpd.conf &
 if [ -n "$URL1" ]; then
-  ffmpeg -i "$URL1" -q:v 25 -r 1 -update 1 /tmp/www/snapshot1.jpg &
+  ffmpeg -i "$URL1" -q:v 25 -r 1 -update 1  -loglevel quiet -stats -y /tmp/www/snapshot1.jpg &
 fi
 if [ -n "$URL2" ]; then
   ffmpeg -i "$URL2" -q:v 25 -r 1 -update 1 /tmp/www/snapshot2.jpg &
