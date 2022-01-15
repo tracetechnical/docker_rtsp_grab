@@ -1,6 +1,6 @@
 #!/bin/bash
 /usr/sbin/lighttpd -D -f /lighttpd.conf &
-if [ -n "QUALITY" ]; then
+if [ -n "$QUALITY" ]; then
   Q=$QUALITY
 else
   Q=25
